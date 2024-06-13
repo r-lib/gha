@@ -8,6 +8,14 @@
 \description{
 When running code on GitHub actions, you want to make your code as easy as possible to debug if something goes wrong. This package provides you with tools to achieve that goal.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/r-lib/gha}
+  \item Report bugs at \url{https://github.com/r-lib/gha/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Hadley Wickham \email{hadley@rstudio.com}
 

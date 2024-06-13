@@ -76,8 +76,8 @@ to report problems that require manual intervention.</p></li>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">gha_debug</span><span class="op">(</span><span class="va">message</span>, frame <span class="op">=</span> <span class="fu">caller_env</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">gha_notice</span><span class="op">(</span></span>
-<span>  <span class="va">title</span>,</span>
 <span>  <span class="va">message</span>,</span>
+<span>  title <span class="op">=</span> <span class="st">"gha"</span>,</span>
 <span>  file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  line <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  col <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -87,8 +87,8 @@ to report problems that require manual intervention.</p></li>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">gha_warning</span><span class="op">(</span></span>
-<span>  <span class="va">title</span>,</span>
 <span>  <span class="va">message</span>,</span>
+<span>  title <span class="op">=</span> <span class="st">"gha"</span>,</span>
 <span>  file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  line <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  col <span class="op">=</span> <span class="cn">NULL</span>,</span>
@@ -98,8 +98,8 @@ to report problems that require manual intervention.</p></li>
 <span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">gha_error</span><span class="op">(</span></span>
-<span>  <span class="va">title</span>,</span>
 <span>  <span class="va">message</span>,</span>
+<span>  title <span class="op">=</span> <span class="st">"gha"</span>,</span>
 <span>  file <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  line <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  col <span class="op">=</span> <span class="cn">NULL</span>,</span>

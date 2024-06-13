@@ -3,6 +3,9 @@
 \name{knitr_time_chunks}
 \alias{knitr_time_chunks}
 \title{Compute duration of each knitr chunk}
+\source{
+Inspired by \url{https://bookdown.org/yihui/rmarkdown-cookbook/time-chunk.html}.
+}
 \usage{
 knitr_time_chunks()
 }

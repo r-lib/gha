@@ -10,8 +10,8 @@
 gha_debug(message, frame = caller_env())
 
 gha_notice(
-  title,
   message,
+  title = "gha",
   file = NULL,
   line = NULL,
   col = NULL,
@@ -21,8 +21,8 @@ gha_notice(
 )
 
 gha_warning(
-  title,
   message,
+  title = "gha",
   file = NULL,
   line = NULL,
   col = NULL,
@@ -32,8 +32,8 @@ gha_warning(
 )
 
 gha_error(
-  title,
   message,
+  title = "gha",
   file = NULL,
   line = NULL,
   col = NULL,

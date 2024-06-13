@@ -5,6 +5,8 @@
 #' and is generally good practice when rendering an Rmd or qmd in a 
 #' non-interactive environment.
 #' 
+#' @source Inspired by <https://bookdown.org/yihui/rmarkdown-cookbook/time-chunk.html>.
+#' 
 #' @export
 knitr_time_chunks <- function() {
   check_required("knitr")
@@ -12,19 +14,16 @@ knitr_time_chunks <- function() {
     return(invisible())
   }
   
-  # Time every chunk
-  # from https://bookdown.org/yihui/rmarkdown-cookbook/time-chunk.html
-  knitr::knit_hooks$set(time_it = local({
-    now <- NULL
-    function(before, options) { 
-      if (before) {
-        now <<- Sys.time()
-      } else {
-        res <- difftime(Sys.time(), now, units = "secs")
-        log_glue("Chunk [{options$label}] took {round(res, 1)}s")
-      }
+  now <- NULL
+  knitr::knit_hooks$set(time_it = function(before, options) { 
+    if (before) {
+      now <<- Sys.time()
+    } else {
+      res <- difftime(Sys.time(), now, units = "secs")
+      log_glue("Chunk [{options$label}] took {round(res, 1)}s")
     }
-  }))
+  })
   knitr::opts_chunk$set(time_it = TRUE)
 
+  invisible()
 }

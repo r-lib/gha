@@ -7,8 +7,8 @@ defer <- function(expr, env = caller_env(), after = FALSE) {
   do.call(on.exit, list(thunk, TRUE, after), envir = env)
 }
 
-log_glue <- function(x, frame = caller_env()) {
-  log_line(glue(x, .env = frame))
+log_glue <- function(.x, frame = caller_env()) {
+  log_line(glue(.x, .envir = frame))
 }
 
 log_line <- function(...) {

@@ -1,0 +1,20 @@
+Package: gha
+Title: Useful functions for GitHub Actions
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
+    person("RStudio", role = c("cph", "fnd"))
+  )
+Description: When running code on GitHub actions, you want to make your code 
+    as easy as possible to debug if something goes wrong. This package provides
+    you with tools to achieve that goal.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Imports: 
+    glue,
+    rlang (>= 1.1.0)
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

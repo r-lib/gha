@@ -32,8 +32,8 @@ gha_debug <- function(message, frame = caller_env()) {
 #' @param title Interpolated glue string giving a custom title for the message.
 #' @param file,line,col,endLine,endCol Optionally, associate a message with
 #'   a specific file, and location within that file.
-gha_notice <- function(title,
-                       message,
+gha_notice <- function(message,
+                       title = "gha",
                        file = NULL,
                        line = NULL,
                        col = NULL,
@@ -56,8 +56,8 @@ gha_notice <- function(title,
 
 #' @export
 #' @rdname gha_debug
-gha_warning <- function(title,
-                        message,
+gha_warning <- function(message,
+                        title = "gha",
                         file = NULL,
                         line = NULL,
                         col = NULL,
@@ -79,8 +79,8 @@ gha_warning <- function(title,
 
 #' @export
 #' @rdname gha_debug
-gha_error <- function(title,
-                      message,
+gha_error <- function(message,
+                      title = "gha",
                       file = NULL,
                       line = NULL,
                       col = NULL,

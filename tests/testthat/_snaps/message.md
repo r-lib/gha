@@ -5,18 +5,18 @@
     Output
       ::debug::message
     Code
-      gha_notice("title", "message")
+      gha_notice("message")
     Output
-      ::notice title=title::message
+      ::notice title=gha::message
       
     Code
-      gha_warning("title", "message")
+      gha_warning("message")
     Output
-      ::warning title=title::message
+      ::warning title=gha::message
       
     Code
-      gha_error("title", "message")
+      gha_error("message")
     Output
-      ::error title=title::message
+      ::error title=gha::message
       
 

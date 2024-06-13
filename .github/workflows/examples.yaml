@@ -11,7 +11,7 @@ name: examples
 permissions: read-all
 
 jobs:
-  pkgdown:
+  examples:
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}

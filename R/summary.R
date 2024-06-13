@@ -15,11 +15,10 @@ summary_stream <- function(frame = caller_env()) {
   out <- Sys.getenv("GITHUB_STEP_SUMMARY")
   
   if (is_testing() || out == "") {
-    out <- stdout()
-  } 
-
-  con <- file(out, "a")
-  defer(close(con))
-
+    con <- stdout()
+  } else {
+    con <- file(out, "a")
+    defer(close(con), frame)
+  }
   con
 }

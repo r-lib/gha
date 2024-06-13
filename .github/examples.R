@@ -2,7 +2,7 @@ library(gha)
 library(rlang)
 
 gha_debug("Debugging")
-gha_notice("Notice me!")
+gha_notice("Notice me!%0AThis is the second line%0AThis is the third line.")
 gha_warning("This is a warning!")
 gha_error("DANGER WILL ROBINSON!")
 

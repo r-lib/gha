@@ -24,8 +24,7 @@ gha_debug <- function(message, frame = caller_env()) {
   check_string(message)
 
   message <- glue(message, .envir = frame)
-  message <- paste0("::debug::", message, "\n")
-  cat(message, file = gha_stream())
+  log_line("::debug::", message)
 }
 
 #' @export
@@ -138,10 +137,5 @@ gha_message <- function(type,
   arg_str <- paste0(names(arguments), "=", arguments, collapse = ",")
   message <- paste0("::", type, " ", arg_str, "::", message, "\n")
   
-  cat(message, file = gha_stream())
-}
-
-gha_stream <- function() {
-  # Since expect_snapshot() can't capture stderr()
-  if (is_testing()) stdout() else stderr()
+  log_line(message)
 }

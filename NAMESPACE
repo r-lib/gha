@@ -3,6 +3,8 @@
 export(gha_debug)
 export(gha_error)
 export(gha_notice)
+export(gha_summary)
 export(gha_warning)
+export(knitr_time_chunks)
 import(rlang)
 importFrom(glue,glue)

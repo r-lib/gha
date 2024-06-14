@@ -135,7 +135,6 @@ gha_message <- function(type,
   )
   arguments <- compact(arguments)
   arg_str <- paste0(names(arguments), "=", arguments, collapse = ",")
-  message <- paste0("::", type, " ", arg_str, "::", message, "\n")
   
-  log_line(message)
+  log_line("::", type, " ", arg_str, "::", message)
 }

@@ -12,6 +12,7 @@ License: MIT + file LICENSE
 URL: https://github.com/r-lib/gha
 BugReports: https://github.com/r-lib/gha/issues
 Imports: 
+    curl,
     glue,
     rlang (>= 1.1.0)
 Suggests: 

@@ -22,3 +22,6 @@ h <- function() {
   warning("This is a warning!")
 }
 f()
+
+event <- Sys.getenv("GITHUB_EVENT_NAME", "localhost")
+ntfy_send("hKaZodPEhZVdcMHU", "Examples run by {event}")

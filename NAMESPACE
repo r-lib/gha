@@ -2,6 +2,8 @@
 
 export(gha_debug)
 export(gha_error)
+export(gha_group_end)
+export(gha_group_start)
 export(gha_notice)
 export(gha_summary)
 export(gha_warning)

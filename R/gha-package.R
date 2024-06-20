@@ -6,3 +6,6 @@
 #' @importFrom glue glue
 ## usethis namespace: end
 NULL
+
+the <- new_environment()
+the$stack <- list()
